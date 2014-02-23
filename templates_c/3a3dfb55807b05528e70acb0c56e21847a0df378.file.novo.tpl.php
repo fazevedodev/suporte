@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-22 23:08:45
+<?php /* Smarty version Smarty-3.1.16, created on 2014-02-23 22:26:22
          compiled from ".\templates\novo.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:288805307ef3344b2c0-17163682%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a3dfb55807b05528e70acb0c56e21847a0df378' => 
     array (
       0 => '.\\templates\\novo.tpl',
-      1 => 1393106924,
+      1 => 1393190778,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/text.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/960_24_col.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
-
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.maskedinput-1.1.4.pack.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#cpf").mask("999.999.999-99");
+                alert("fucker");
+            });
+        </script>
         <title></title>
     </head>
     <body>
@@ -55,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 CPF
                             </div>
                             <div class="valor">
-                                <input type="text" name="cpf"/>
+                                <input type="text" name="cpf" id="cpf"/>
                             </div>
                         </td>
                         <td>

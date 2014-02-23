@@ -6,7 +6,13 @@
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/text.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/960_24_col.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
-
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.maskedinput-1.1.4.pack.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#cpf").mask("999.999.999-99");
+            });
+        </script>
         <title></title>
     </head>
     <body>
@@ -27,7 +33,7 @@
                                 CPF
                             </div>
                             <div class="valor">
-                                <input type="text" name="cpf"/>
+                                <input type="text" name="cpf" id="cpf"/>
                             </div>
                         </td>
                         <td>
