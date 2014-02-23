@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-23 20:32:52
+<?php /* Smarty version Smarty-3.1.16, created on 2014-02-23 21:37:55
          compiled from ".\templates\admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:63455307fc85c5ddb6-67327875%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dde4406728b78ad8acb77d025ffd08e41bf138dd' => 
     array (
       0 => '.\\templates\\admin.tpl',
-      1 => 1393183969,
+      1 => 1393187873,
       2 => 'file',
     ),
   ),
@@ -22,9 +22,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'abertos' => 0,
     'i' => 0,
     'chamado' => 0,
-    'paginas' => 0,
+    'paginas_abertos' => 0,
     'pagina' => 0,
     'atendimentos' => 0,
+    'paginas_atendimento' => 0,
+    'paginas_fechados' => 0,
     'fechados' => 0,
   ),
   'has_nocache_code' => false,
@@ -39,6 +41,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/simpletabs.css" />
         <script type="text/javascript" src="js/simpletabs_1.3.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("tr.par").click(function() {
+                    window.location.href = $(this).find("a").attr("href");
+                });
+                $("tr.impar").click(function() {
+                    window.location.href = $(this).find("a").attr("href");
+                });
+            });
+        </script>
         <title></title>
     </head>
     <body>
@@ -73,8 +86,9 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                                     class="impar"
                                 <?php }?>
                             >
-                                <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['data'];?>
-</td>
+                                <td><a href="chamado.php?ticket=<?php echo $_smarty_tpl->tpl_vars['chamado']->value['ticket'];?>
+"><?php echo $_smarty_tpl->tpl_vars['chamado']->value['data'];?>
+</a></td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['hora'];?>
 </td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['ticket'];?>
@@ -88,10 +102,10 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                             </tr>
                         <?php } ?>
                     </table>
-                    <?php if (isset($_smarty_tpl->tpl_vars['paginas']->value)) {?>
+                    <?php if (isset($_smarty_tpl->tpl_vars['paginas_abertos']->value)) {?>
                         <div class="paginacao">
                             <?php  $_smarty_tpl->tpl_vars['pagina'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['pagina']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['paginas']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['paginas_abertos']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['pagina']->key => $_smarty_tpl->tpl_vars['pagina']->value) {
 $_smarty_tpl->tpl_vars['pagina']->_loop = true;
 ?>
@@ -126,8 +140,9 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                                     class="impar"
                                 <?php }?>
                             >
-                                <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['data'];?>
-</td>
+                                <td><a href="chamado.php?ticket=<?php echo $_smarty_tpl->tpl_vars['chamado']->value['ticket'];?>
+"><?php echo $_smarty_tpl->tpl_vars['chamado']->value['data'];?>
+</a></td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['hora'];?>
 </td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['ticket'];?>
@@ -141,6 +156,19 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                             </tr>
                         <?php } ?>
                     </table>
+                    <?php if (isset($_smarty_tpl->tpl_vars['paginas_atendimento']->value)) {?>
+                        <div class="paginacao">
+                            <?php  $_smarty_tpl->tpl_vars['pagina'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['pagina']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['paginas_fechados']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['pagina']->key => $_smarty_tpl->tpl_vars['pagina']->value) {
+$_smarty_tpl->tpl_vars['pagina']->_loop = true;
+?>
+                                <a href="admin.php?p=<?php echo $_smarty_tpl->tpl_vars['pagina']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['pagina']->value;?>
+</a>
+                            <?php } ?>
+                        </div>
+                    <?php }?>
                 </div>
                 <div  class="simpleTabsContent">
                     <table class="admin">
@@ -166,8 +194,9 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                                     class="impar"
                                 <?php }?>
                             >
-                                <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['data'];?>
-</td>
+                                <td><a href="chamado.php?ticket=<?php echo $_smarty_tpl->tpl_vars['chamado']->value['ticket'];?>
+"><?php echo $_smarty_tpl->tpl_vars['chamado']->value['data'];?>
+</a></td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['hora'];?>
 </td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['ticket'];?>
@@ -181,6 +210,19 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                             </tr>
                         <?php } ?>
                     </table>
+                    <?php if (isset($_smarty_tpl->tpl_vars['paginas_fechados']->value)) {?>
+                        <div class="paginacao">
+                            <?php  $_smarty_tpl->tpl_vars['pagina'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['pagina']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['paginas_fechados']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['pagina']->key => $_smarty_tpl->tpl_vars['pagina']->value) {
+$_smarty_tpl->tpl_vars['pagina']->_loop = true;
+?>
+                                <a href="admin.php?p=<?php echo $_smarty_tpl->tpl_vars['pagina']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['pagina']->value;?>
+</a>
+                            <?php } ?>
+                        </div>
+                    <?php }?>
                 </div>
             </div>
         </div>

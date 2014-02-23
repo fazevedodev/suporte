@@ -121,10 +121,20 @@ textarea {
     background-position: bottom left;
 }
 
+.par:hover,
+.impar:hover {
+    cursor: pointer;
+    background-color: #E0FFFF;
+}
+
 a {
     color: inherit;
 }
 
 .paginacao {
     text-align: center;
+}
+
+.admin a {
+    text-decoration: none;
 }

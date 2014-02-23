@@ -76,8 +76,5 @@
     $smarty->assign("atendimentos", $atendimentos);
     $smarty->assign("fechados", $fechados);
     
-    $paginas = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-    $smarty->assign("paginas", $paginas);
-    
     $smarty->display("admin.tpl");
 ?>

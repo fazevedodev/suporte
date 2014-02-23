@@ -8,6 +8,17 @@
         <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/simpletabs.css" />
         <script type="text/javascript" src="js/simpletabs_1.3.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("tr.par").click(function() {
+                    window.location.href = $(this).find("a").attr("href");
+                });
+                $("tr.impar").click(function() {
+                    window.location.href = $(this).find("a").attr("href");
+                });
+            });
+        </script>
         <title></title>
     </head>
     <body>
@@ -36,7 +47,7 @@
                                     class="impar"
                                 {/if}
                             >
-                                <td>{$chamado['data']}</td>
+                                <td><a href="chamado.php?ticket={$chamado['ticket']}">{$chamado['data']}</a></td>
                                 <td>{$chamado['hora']}</td>
                                 <td>{$chamado['ticket']}</td>
                                 <td>{$chamado['setor']}</td>
@@ -45,9 +56,9 @@
                             </tr>
                         {/foreach}
                     </table>
-                    {if isset($paginas)}
+                    {if isset($paginas_abertos)}
                         <div class="paginacao">
-                            {foreach from=$paginas item=pagina}
+                            {foreach from=$paginas_abertos item=pagina}
                                 <a href="admin.php?p={$pagina}">{$pagina}</a>
                             {/foreach}
                         </div>
@@ -71,7 +82,7 @@
                                     class="impar"
                                 {/if}
                             >
-                                <td>{$chamado['data']}</td>
+                                <td><a href="chamado.php?ticket={$chamado['ticket']}">{$chamado['data']}</a></td>
                                 <td>{$chamado['hora']}</td>
                                 <td>{$chamado['ticket']}</td>
                                 <td>{$chamado['setor']}</td>
@@ -80,6 +91,13 @@
                             </tr>
                         {/foreach}
                     </table>
+                    {if isset($paginas_atendimento)}
+                        <div class="paginacao">
+                            {foreach from=$paginas_fechados item=pagina}
+                                <a href="admin.php?p={$pagina}">{$pagina}</a>
+                            {/foreach}
+                        </div>
+                    {/if}
                 </div>
                 <div  class="simpleTabsContent">
                     <table class="admin">
@@ -99,7 +117,7 @@
                                     class="impar"
                                 {/if}
                             >
-                                <td>{$chamado['data']}</td>
+                                <td><a href="chamado.php?ticket={$chamado['ticket']}">{$chamado['data']}</a></td>
                                 <td>{$chamado['hora']}</td>
                                 <td>{$chamado['ticket']}</td>
                                 <td>{$chamado['setor']}</td>
@@ -108,6 +126,13 @@
                             </tr>
                         {/foreach}
                     </table>
+                    {if isset($paginas_fechados)}
+                        <div class="paginacao">
+                            {foreach from=$paginas_fechados item=pagina}
+                                <a href="admin.php?p={$pagina}">{$pagina}</a>
+                            {/foreach}
+                        </div>
+                    {/if}
                 </div>
             </div>
         </div>
