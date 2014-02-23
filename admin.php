@@ -57,7 +57,7 @@
         $setor_dados = $db->execSql("SELECT * FROM setor WHERE setor.id='".$fechado['id_setor']."'");
         $tipo_dados = $db->execSql("SELECT * FROM tipo_chamado WHERE tipo_chamado.id='".$fechado['id_tipo_chamado']."'");
         
-        array_push($abertos, array('ticket' => $fechado['ticket'],
+        array_push($fechados, array('ticket' => $fechado['ticket'],
                                    'data' => $fechado['data'],
                                    'hora' => $fechado['hora'],
                                    'nome' => $fechado['nome'],
