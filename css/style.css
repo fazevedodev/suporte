@@ -71,6 +71,7 @@ textarea {
 
 .admin {
     border: 1px solid #aaa;
+    width: 100%;
 }
 
 .header {
@@ -122,4 +123,8 @@ textarea {
 
 a {
     color: inherit;
+}
+
+.paginacao {
+    text-align: center;
 }
