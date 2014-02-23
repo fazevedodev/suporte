@@ -1,0 +1,125 @@
+p {
+    margin-bottom: 3px;
+}
+
+.box {
+    border: 1px solid #111;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.ticket {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #DED;
+}
+
+.destaque-aberto {
+    background-color: #FAA;
+    font-weight: bold;
+    font-size: 24px;
+    color: #800;
+}
+
+.destaque-fechado {
+    background-color: #AFA;
+    font-weight: bold;
+    font-size: 24px;
+    color: #080;
+}
+
+.destaque-atendimento {
+    background-color: #F4A460;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.rotulo {
+    font-size: 12px;
+    background: #ccc;
+    background-image: url("../images/gray-grad.png");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    padding: 0px 10px 0px 10px;
+}
+
+.valor {
+    background-color: #F8F8FF;
+    background-image: url("../images/white-grad.png");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    padding: 0px 10px 10px 10px;
+}
+
+.chamado {
+    border: 1px solid #aaa;
+    max-width: 480px;
+}
+
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=email],
+textarea {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #aac;
+    width: 100%;
+}
+
+.admin {
+    border: 1px solid #aaa;
+}
+
+.header {
+    background: #ccc;
+    background-image: url("../images/gray-grad.png");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    padding: 0px 10px 0px 10px;
+}
+
+.admin th,
+.admin td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.admin tr {
+    border-bottom: 1px solid #aaa;
+}
+
+.aberto {
+    color: #a00;
+    font-weight: bold;
+}
+
+.atendimento {
+    color: #F4A460;
+    font-weight: bold;
+}
+
+.fechado {
+    color: #0a0;
+    font-weight: bold;
+}
+
+.par {
+    background-color: #F8F8FF;
+    background-image: url("../images/white-grad.png");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+}
+
+.impar {
+    background-color: #D6D6DD;
+    background-image: url("../images/white-grad.png");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+}
+
+a {
+    color: inherit;
+}
