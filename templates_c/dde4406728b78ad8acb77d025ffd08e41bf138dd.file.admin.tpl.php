@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-23 15:26:48
+<?php /* Smarty version Smarty-3.1.16, created on 2014-02-23 20:32:52
          compiled from ".\templates\admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:63455307fc85c5ddb6-67327875%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dde4406728b78ad8acb77d025ffd08e41bf138dd' => 
     array (
       0 => '.\\templates\\admin.tpl',
-      1 => 1393165602,
+      1 => 1393183969,
       2 => 'file',
     ),
   ),
@@ -52,7 +52,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <div class="simpleTabsContent">
                     <table class="admin">
                         <tr class="header">
-                            <th>Situação</th>
                             <th>Data</th>
                             <th>Hora</th>
                             <th>Ticket</th>
@@ -74,19 +73,6 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                                     class="impar"
                                 <?php }?>
                             >
-                                <td
-                                    <?php if (mb_strtoupper($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8')=="ABERTO") {?>
-                                        class="aberto"
-                                    <?php } elseif (mb_strtoupper($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8')=="EM ATENDIMENTO") {?>
-                                        class="atendimento"
-                                    <?php } elseif (mb_strtoupper($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8')=="FECHADO") {?>
-                                        class="fechado"
-                                    <?php }?>
-                                >
-                                    <a href="chamado.php?ticket=<?php echo $_smarty_tpl->tpl_vars['chamado']->value['ticket'];?>
-"><?php echo ucfirst(mb_strtolower($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8'));?>
-</a>
-                                </td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['data'];?>
 </td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['hora'];?>
@@ -119,7 +105,6 @@ $_smarty_tpl->tpl_vars['pagina']->_loop = true;
                 <div  class="simpleTabsContent">
                     <table class="admin">
                         <tr class="header">
-                            <th>Situação</th>
                             <th>Data</th>
                             <th>Hora</th>
                             <th>Ticket</th>
@@ -141,19 +126,6 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                                     class="impar"
                                 <?php }?>
                             >
-                                <td
-                                    <?php if (mb_strtoupper($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8')=="ABERTO") {?>
-                                        class="aberto"
-                                    <?php } elseif (mb_strtoupper($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8')=="EM ATENDIMENTO") {?>
-                                        class="atendimento"
-                                    <?php } elseif (mb_strtoupper($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8')=="FECHADO") {?>
-                                        class="fechado"
-                                    <?php }?>
-                                >
-                                    <a href="chamado.php?ticket=<?php echo $_smarty_tpl->tpl_vars['chamado']->value['ticket'];?>
-"><?php echo ucfirst(mb_strtolower($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8'));?>
-</a>
-                                </td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['data'];?>
 </td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['hora'];?>
@@ -173,7 +145,6 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                 <div  class="simpleTabsContent">
                     <table class="admin">
                         <tr class="header">
-                            <th>Situação</th>
                             <th>Data</th>
                             <th>Hora</th>
                             <th>Ticket</th>
@@ -195,19 +166,6 @@ $_smarty_tpl->tpl_vars['chamado']->_loop = true;
                                     class="impar"
                                 <?php }?>
                             >
-                                <td
-                                    <?php if (mb_strtoupper($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8')=="ABERTO") {?>
-                                        class="aberto"
-                                    <?php } elseif (mb_strtoupper($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8')=="EM ATENDIMENTO") {?>
-                                        class="atendimento"
-                                    <?php } elseif (mb_strtoupper($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8')=="FECHADO") {?>
-                                        class="fechado"
-                                    <?php }?>
-                                >
-                                    <a href="chamado.php?ticket=<?php echo $_smarty_tpl->tpl_vars['chamado']->value['ticket'];?>
-"><?php echo ucfirst(mb_strtolower($_smarty_tpl->tpl_vars['chamado']->value['situacao'], 'UTF-8'));?>
-</a>
-                                </td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['data'];?>
 </td>
                                 <td><?php echo $_smarty_tpl->tpl_vars['chamado']->value['hora'];?>
