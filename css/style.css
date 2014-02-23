@@ -124,7 +124,7 @@ textarea {
 .par:hover,
 .impar:hover {
     cursor: pointer;
-    background-color: #E0FFFF;
+    background-color: #E8E8E8;
 }
 
 a {
