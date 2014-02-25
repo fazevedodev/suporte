@@ -138,3 +138,13 @@ a {
 .admin a {
     text-decoration: none;
 }
+
+.login {
+    border: 1px solid #aaa;
+    width: 350px;
+}
+
+.login tr td{
+    padding-left: 10px;
+    padding-right: 10px;
+}

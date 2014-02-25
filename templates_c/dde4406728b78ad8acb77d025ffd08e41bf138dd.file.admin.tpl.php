@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-23 21:55:37
+<?php /* Smarty version Smarty-3.1.16, created on 2014-02-24 22:12:28
          compiled from ".\templates\admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:63455307fc85c5ddb6-67327875%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dde4406728b78ad8acb77d025ffd08e41bf138dd' => 
     array (
       0 => '.\\templates\\admin.tpl',
-      1 => 1393188935,
+      1 => 1393276345,
       2 => 'file',
     ),
   ),
@@ -35,7 +35,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta http-equiv="refresh" content="600">
+        <meta http-equiv="refresh" content="10">
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/reset.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/text.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/960_24_col.css" />

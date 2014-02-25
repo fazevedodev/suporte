@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-02-23 22:26:22
+<?php /* Smarty version Smarty-3.1.16, created on 2014-02-24 14:23:27
          compiled from ".\templates\novo.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:288805307ef3344b2c0-17163682%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a3dfb55807b05528e70acb0c56e21847a0df378' => 
     array (
       0 => '.\\templates\\novo.tpl',
-      1 => 1393190778,
+      1 => 1393248183,
       2 => 'file',
     ),
   ),
@@ -39,7 +39,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <script type="text/javascript">
             $(document).ready(function(){
                 $("#cpf").mask("999.999.999-99");
-                alert("fucker");
             });
         </script>
         <title></title>

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta http-equiv="refresh" content="600">
+        <meta http-equiv="refresh" content="10">
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/reset.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/text.css" />
         <link rel="stylesheet" type="text/css" media="all" href="css/grid960/960_24_col.css" />
